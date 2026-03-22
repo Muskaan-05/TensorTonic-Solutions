@@ -11,7 +11,5 @@ def mean_median_mode(x):
     median=float(np.median(x))
     counts = Counter(x)
     max_freq = max(counts.values())
-
-    # choose smallest value among those with highest frequency
     mode = float(min(k for k, v in counts.items() if v == max_freq))
     return mean, median, mode
